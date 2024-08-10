@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Resources:
+
+  # The S3 Bucket, separate to upload the version
+  LambdaBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: 'lambda-bucket-xray'
+      VersioningConfiguration:
+        Status: 'Enabled'
