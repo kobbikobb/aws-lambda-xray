@@ -10,21 +10,27 @@ This repository contains a sample application demonstrating how to set up AWS La
 
 ## Creating the Lambda and deploying the code
 
-### Create an S3 bucket
+### 1. Create an S3 bucket
 ```
 aws cloudformation create-stack --stack-name s3-xray --template-body file://stack-s3.yaml --region us-east-1
 ```
 
-### Zip and upload the App
+### 2. Zip and Upload the App
 ```
 ./zipit.sh
 ./upload2s3.zip
 ```
 
-### Create the Lambda Function
+### 3. Create the Lambda Function
 ```
 aws cloudformation create-stack --stack-name lambda-xray --template-body file://stack-lambda.yaml --region us-east-1 --capabilities CAPABILITY_NAMED_IAM
 ```
+
+### 4. Test it out
+- Log in to the AWS console
+- Navigate to the Lambda Function and execute it
+- Navigate to XRay and observe the tracking :) 
+
 ## Useful AWS command to clean up and update 
 ```
 aws cloudformation delete-stack --stack-name s3-xray --region us-east-1
