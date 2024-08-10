@@ -4,6 +4,7 @@ This repository contains a sample application demonstrating how to set up AWS La
 
 ## Prerequisites
 
+- [NodeJS](https://nodejs.org/en/download/package-manager) installed.
 - [AWS CLI](https://aws.amazon.com/cli/) installed and configured.
 - Authenticated with an AWS account with the necessary permissions.
   - export AWS_Profile=yourprofile
@@ -26,7 +27,7 @@ aws cloudformation create-stack --stack-name s3-xray --template-body file://stac
 aws cloudformation create-stack --stack-name lambda-xray --template-body file://stack-lambda.yaml --region us-east-1 --capabilities CAPABILITY_NAMED_IAM
 ```
 
-### 4. Test it out
+### 4. Test it out, it should now work 🎉
 - Log in to the AWS console
 - Navigate to the Lambda Function and execute it
 - Navigate to XRay and observe the tracking :) 
