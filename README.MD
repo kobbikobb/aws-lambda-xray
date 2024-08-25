@@ -19,7 +19,7 @@ aws cloudformation create-stack --stack-name s3-xray --template-body file://stac
 ### 2. Zip and Upload the App
 ```
 ./zipit.sh
-./upload2s3.zip
+./upload2s3.sh
 ```
 
 ### 3. Create the Lambda Function
